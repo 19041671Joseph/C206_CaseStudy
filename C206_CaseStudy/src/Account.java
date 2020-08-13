@@ -39,8 +39,9 @@ public void setUserRole(String userRole) {
 }
 public String toString()
 {
-	String test = null;
-	return test;
+	
+	String usertoString=String.format("%s %12s % 12s", this.username,this.password,this.userRole);
+	return usertoString;
 }
 
 
