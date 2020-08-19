@@ -39,7 +39,7 @@ public class C206_CaseStudyTest {
 	@Test
 	public void addPromotionsTest() {
 		// Item list is not null, so that can add a new item - boundary
-		assertNotNull("Check if there is valid Camcorder arraylist to add to", PromotionList);
+		assertNotNull("Check if there is valid promotions arraylist to add to", PromotionList);
 		//Given an empty list, after adding 1 item, the size of the list is 1 - normal
 		//The item just added is as same as the first item of the list
 		C206_CaseStudy.addPromotions(PromotionList, p1);
@@ -53,6 +53,7 @@ public class C206_CaseStudyTest {
 		assertSame("Check that Camcorder is added", p2, PromotionList.get(1));
 	}
 	
+	@Test
 	public void retrieveAllPromotionsTest() {
 		// Test if Item list is not null but empty -boundary
 		assertNotNull("Test if there is valid Camcorder arraylist to retrieve item", PromotionList);
@@ -73,6 +74,18 @@ public class C206_CaseStudyTest {
 		testOutput = String.format("%-10s %-30s %-10s\n","Drink Promo", 5, "11/2/2020");
 	
 		assertEquals("Test that ViewAllCamcorderlist", testOutput, allPromotion);
+		
+	}
+	@Test
+	public void deletePromotionsTest() {
+		// Test if Item list is not null but empty -boundary
+		assertNotNull("Test if there is valid Camcorder arraylist to retrieve item", PromotionList);
+		
+		//Given an empty list, after adding 2 items, test if the size of the list is 0 after deleting - normal
+		C206_CaseStudy.deletePromotions(PromotionList);
+		C206_CaseStudy.deletePromotions(PromotionList);
+		assertEquals("Test that Camcorder arraylist size is 2", 0, PromotionList.size());
+		
 		
 	}
 

@@ -55,7 +55,7 @@ ArrayList<Promotions> PromotionList = new ArrayList<Promotions>();
 		}
 		return output;
 	}
-	public void deletePromotions(ArrayList<Promotions> PromotionList) {
+	public static void deletePromotions(ArrayList<Promotions> PromotionList) {
 		
 		String name = Helper.readString("Enter promotion name to remove > ");
 		boolean isRemoved = false;
